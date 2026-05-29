@@ -64,7 +64,9 @@ export const metadata: Metadata = {
       'Daily puzzle games you can play in your browser. No account, no download.',
     images: ['/og-image.jpg'],
   },
-  // verification: { google: 'PASTE_GSC_CODE_HERE' },
+  verification: {
+    google: 'qzS28dEX-PI3uCBvR4d0aLWy_dh9VHbqx2r8TGR_PU8',
+  },
 }
 
 const jsonLd = {
