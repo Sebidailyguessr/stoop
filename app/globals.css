@@ -751,6 +751,42 @@ body::after {
   border-radius: 3px;
   border: 1px dashed rgba(42, 31, 21, 0.22);
 }
+.arcade-card--live {
+  filter: none;
+  opacity: 1;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.arcade-card--live:hover {
+  filter: none;
+  opacity: 1;
+  border-color: var(--terracotta);
+  box-shadow: 0 2px 14px rgba(196, 90, 58, 0.13);
+}
+.arcade-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--terracotta);
+  padding: 3px 7px;
+  border-radius: 3px;
+  border: 1px solid rgba(196, 90, 58, 0.35);
+  background: rgba(196, 90, 58, 0.06);
+}
+.arcade-live-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--terracotta);
+  box-shadow: 0 0 0 0 rgba(196, 80, 58, 0.6);
+  animation: live-pulse 2.2s infinite;
+  flex-shrink: 0;
+}
 
 /* Bloom grid preview */
 .bloom-grid { display: grid; grid-template-columns: repeat(8, 1fr); gap: 3px; width: 124px; }

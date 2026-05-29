@@ -254,7 +254,7 @@ export default function Home() {
         <div className="arcade-row">
 
           {/* Palette */}
-          <article className="arcade-card">
+          <a className="arcade-card arcade-card--live" href="https://palette.stoop.games" target="_blank" rel="noopener noreferrer">
             <div className="arcade-preview" aria-hidden="true">
               <div style={{display:'flex',alignItems:'center',gap:0,background:'rgba(243,233,214,0.7)',borderRadius:'8px',padding:'10px 14px'}}>
                 <div style={{display:'flex',flexDirection:'column',alignItems:'center',gap:'6px'}}>
@@ -282,10 +282,13 @@ export default function Home() {
               <p className="arcade-desc">One target colour a day. Mix RGB sliders until you nail the match. Score by perceptual distance.</p>
               <div className="arcade-footer">
                 <span className="arcade-mechanic">Delta-E scoring</span>
-                <span className="arcade-tag">coming &apos;26</span>
+                <span className="arcade-live">
+                  <span className="arcade-live-dot" aria-hidden="true"></span>
+                  Live
+                </span>
               </div>
             </div>
-          </article>
+          </a>
 
           {/* Bloom */}
           <article className="arcade-card">
