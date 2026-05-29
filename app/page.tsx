@@ -57,7 +57,7 @@ export default function Home() {
         <div className="tile-label">
           <h2 id="daily-h">Today&apos;s puzzles</h2>
           <span className="meta">
-            03 live · refreshes 00:00 UTC{' '}
+            04 live · refreshes 00:00 UTC{' '}
             <a className="play-one" href="#daily">play one ✶</a>
           </span>
         </div>
@@ -197,6 +197,48 @@ export default function Home() {
             </div>
           </a>
 
+          {/* Palette */}
+          <a className="card c4" href="https://palette.stoop.games" target="_blank" rel="noopener noreferrer">
+            <div className="card-left">
+              <div className="live-row">
+                <span className="live-dot" aria-hidden="true"></span>
+                Live now
+              </div>
+              <div className="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 10l16 0" />
+                  <path d="M4 14l16 0" />
+                  <path d="M9 10m0 -1.5a1.5 1.5 0 1 0 0 3a1.5 1.5 0 0 0 0 -3" />
+                  <path d="M15 14m0 -1.5a1.5 1.5 0 1 0 0 3a1.5 1.5 0 0 0 0 -3" />
+                </svg>
+              </div>
+              <h3 className="game-name">Palette</h3>
+              <p className="game-desc">Mix the sliders to match today&apos;s colour.</p>
+              <span className="game-url">palette.stoop.games</span>
+              <span className="play-btn">Play today <span className="arrow">→</span></span>
+            </div>
+            <div className="card-right">
+              <div className="ticket" aria-hidden="true">
+                <div className="t-head">
+                  <h4 className="t-name">Palette</h4>
+                  <span className="t-num">#001</span>
+                </div>
+                <hr />
+                <div className="emotion">Colour Expert</div>
+                <div style={{display:'flex',gap:'5px',margin:'6px 0'}}>
+                  <div style={{flex:1,height:'30px',borderRadius:'4px',background:'#c45a3a'}}></div>
+                  <div style={{flex:1,height:'30px',borderRadius:'4px',background:'#b87452'}}></div>
+                </div>
+                <div className="context">ΔE 1.4 · close match</div>
+                <hr />
+                <div className="score-row">
+                  <span className="score">9,847</span>
+                  <span className="pts">pts</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
         </div>
       </section>
 
@@ -204,7 +246,7 @@ export default function Home() {
       <section id="oven" aria-labelledby="oven-h">
         <div className="tile-label">
           <h2 id="oven-h">In the oven</h2>
-          <span className="meta">5 coming · two formats</span>
+          <span className="meta">4 coming · two formats</span>
         </div>
 
         <div className="oven-sub">
@@ -252,43 +294,6 @@ export default function Home() {
         </div>
 
         <div className="arcade-row">
-
-          {/* Palette */}
-          <a className="arcade-card arcade-card--live" href="https://palette.stoop.games" target="_blank" rel="noopener noreferrer">
-            <div className="arcade-preview" aria-hidden="true">
-              <div style={{display:'flex',alignItems:'center',gap:0,background:'rgba(243,233,214,0.7)',borderRadius:'8px',padding:'10px 14px'}}>
-                <div style={{display:'flex',flexDirection:'column',alignItems:'center',gap:'6px'}}>
-                  <div style={{width:'46px',height:'46px',borderRadius:'6px',background:'#c45a3a',border:'1px solid rgba(42,31,21,0.15)'}}></div>
-                  <span style={{fontFamily:'var(--mono)',fontSize:'8px',textTransform:'uppercase',letterSpacing:'0.1em',color:'var(--ink-faded)'}}>target</span>
-                </div>
-                <div style={{display:'flex',flexDirection:'column',alignItems:'center',gap:'6px',margin:'0 12px',paddingBottom:'18px'}}>
-                  <span style={{fontFamily:'var(--serif)',fontSize:'20px',color:'var(--ink-faded)',fontStyle:'italic'}}>vs</span>
-                </div>
-                <div style={{display:'flex',flexDirection:'column',alignItems:'center',gap:'6px'}}>
-                  <div style={{width:'46px',height:'46px',borderRadius:'6px',background:'#b87452',border:'1px solid rgba(42,31,21,0.15)'}}></div>
-                  <span style={{fontFamily:'var(--mono)',fontSize:'8px',textTransform:'uppercase',letterSpacing:'0.1em',color:'var(--ink-faded)'}}>your mix</span>
-                </div>
-                <div style={{marginLeft:'16px',display:'flex',flexDirection:'column',alignItems:'center',gap:'3px',paddingBottom:'18px'}}>
-                  <span style={{fontFamily:'var(--display)',fontSize:'22px',color:'var(--ink)',lineHeight:1,letterSpacing:'-0.01em'}}>9,847</span>
-                  <span style={{fontFamily:'var(--mono)',fontSize:'8px',textTransform:'uppercase',letterSpacing:'0.14em',color:'var(--ink-faded)'}}>pts</span>
-                </div>
-              </div>
-            </div>
-            <div className="arcade-body">
-              <div className="arcade-top">
-                <h3 className="arcade-name">Palette</h3>
-                <span className="arcade-type">Daily · 1 shot</span>
-              </div>
-              <p className="arcade-desc">One target colour a day. Mix RGB sliders until you nail the match. Score by perceptual distance.</p>
-              <div className="arcade-footer">
-                <span className="arcade-mechanic">Delta-E scoring</span>
-                <span className="arcade-live">
-                  <span className="arcade-live-dot" aria-hidden="true"></span>
-                  Live
-                </span>
-              </div>
-            </div>
-          </a>
 
           {/* Bloom */}
           <article className="arcade-card">
