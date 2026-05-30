@@ -1,11 +1,3 @@
-const bloomColors = [
-  '#c45a3a','#c45a3a','#d49a3a','#6b4858','#7a8a5e','#7a8a5e','#6b4858','#d49a3a',
-  '#c45a3a','#c45a3a','#c45a3a','#7a8a5e','#6b4858','#d49a3a','#d49a3a','#6b4858',
-  '#c45a3a','#c45a3a','#c45a3a','#c45a3a','#7a8a5e','#6b4858','#d49a3a','#7a8a5e',
-  '#7a8a5e','#c45a3a','#c45a3a','#c45a3a','#c45a3a','#7a8a5e','#d49a3a','#d49a3a',
-  '#6b4858','#6b4858','#d49a3a','#7a8a5e','#7a8a5e','#c45a3a','#c45a3a','#6b4858',
-]
-
 function getFormattedDate() {
   const now = new Date()
   const weekday = now.toLocaleDateString('en-US', { weekday: 'short' })
@@ -28,7 +20,7 @@ export default function Home() {
           Stoop
         </a>
         <nav aria-label="Primary">
-          <a href="#daily">Today&apos;s puzzles</a>
+          <a href="#daily">Daily puzzles</a>
           <a href="#oven">In the oven</a>
           <a href="#how">How it works</a>
           <a href="#about">About</a>
@@ -52,13 +44,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ============ TODAY'S PUZZLES ============ */}
+      {/* ============ DAILY PUZZLES ============ */}
       <section id="daily" aria-labelledby="daily-h">
         <div className="tile-label">
-          <h2 id="daily-h">Today&apos;s puzzles</h2>
+          <h2 id="daily-h">Daily puzzles</h2>
           <span className="meta">
-            04 live · refreshes 00:00 UTC{' '}
-            <a className="play-one" href="#daily">play one ✶</a>
+            3 games · new puzzle every day
           </span>
         </div>
 
@@ -197,8 +188,20 @@ export default function Home() {
             </div>
           </a>
 
+        </div>
+      </section>
+
+      {/* ============ PLAY FOREVER ============ */}
+      <section id="arcade" aria-labelledby="arcade-h">
+        <div className="tile-label">
+          <h2 id="arcade-h">Play forever</h2>
+          <span className="meta">no daily reset · just play</span>
+        </div>
+
+        <div className="daily">
+
           {/* Palette */}
-          <a className="card c4" href="https://palette.stoop.games" target="_blank" rel="noopener noreferrer">
+          <a className="card c4 card--arcade" href="https://palette.stoop.games" target="_blank" rel="noopener noreferrer">
             <div className="card-left">
               <div className="live-row">
                 <span className="live-dot" aria-hidden="true"></span>
@@ -217,25 +220,39 @@ export default function Home() {
               <span className="game-url">palette.stoop.games</span>
               <span className="play-btn">Play today <span className="arrow">→</span></span>
             </div>
-            <div className="card-right">
-              <div className="ticket" aria-hidden="true">
-                <div className="t-head">
-                  <h4 className="t-name">Palette</h4>
-                  <span className="t-num">#001</span>
-                </div>
-                <hr />
-                <div className="emotion">Colour Expert</div>
-                <div style={{display:'flex',gap:'5px',margin:'6px 0'}}>
-                  <div style={{flex:1,height:'30px',borderRadius:'4px',background:'#c45a3a'}}></div>
-                  <div style={{flex:1,height:'30px',borderRadius:'4px',background:'#b87452'}}></div>
-                </div>
-                <div className="context">ΔE 1.4 · close match</div>
-                <hr />
-                <div className="score-row">
-                  <span className="score">9,847</span>
-                  <span className="pts">pts</span>
-                </div>
+          </a>
+
+          {/* Bloom */}
+          <a className="card c5 card--arcade" href="https://bloom.stoop.games" target="_blank" rel="noopener noreferrer">
+            <div className="card-left">
+              <div className="live-row">
+                <span className="live-dot" aria-hidden="true"></span>
+                Live now
               </div>
+              <div className="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <rect x="1"  y="1"  width="5" height="5" rx="1" fill="#c45a3a" stroke="none"/>
+                  <rect x="7"  y="1"  width="5" height="5" rx="1" fill="#d49a3a" stroke="none"/>
+                  <rect x="13" y="1"  width="5" height="5" rx="1" fill="#7a8a5e" stroke="none"/>
+                  <rect x="19" y="1"  width="5" height="5" rx="1" fill="#6b4858" stroke="none"/>
+                  <rect x="1"  y="7"  width="5" height="5" rx="1" fill="#d49a3a" stroke="none"/>
+                  <rect x="7"  y="7"  width="5" height="5" rx="1" fill="#c45a3a" stroke="none"/>
+                  <rect x="13" y="7"  width="5" height="5" rx="1" fill="#6b4858" stroke="none"/>
+                  <rect x="19" y="7"  width="5" height="5" rx="1" fill="#7a8a5e" stroke="none"/>
+                  <rect x="1"  y="13" width="5" height="5" rx="1" fill="#7a8a5e" stroke="none"/>
+                  <rect x="7"  y="13" width="5" height="5" rx="1" fill="#6b4858" stroke="none"/>
+                  <rect x="13" y="13" width="5" height="5" rx="1" fill="#c45a3a" stroke="none"/>
+                  <rect x="19" y="13" width="5" height="5" rx="1" fill="#d49a3a" stroke="none"/>
+                  <rect x="1"  y="19" width="5" height="5" rx="1" fill="#6b4858" stroke="none"/>
+                  <rect x="7"  y="19" width="5" height="5" rx="1" fill="#7a8a5e" stroke="none"/>
+                  <rect x="13" y="19" width="5" height="5" rx="1" fill="#c45a3a" stroke="none"/>
+                  <rect x="19" y="19" width="5" height="5" rx="1" fill="#d49a3a" stroke="none"/>
+                </svg>
+              </div>
+              <h3 className="game-name">Bloom</h3>
+              <p className="game-desc">Flood-fill the 14×14 grid in as few moves as possible.</p>
+              <span className="game-url">bloom.stoop.games</span>
+              <span className="play-btn">Play today <span className="arrow">→</span></span>
             </div>
           </a>
 
@@ -246,16 +263,10 @@ export default function Home() {
       <section id="oven" aria-labelledby="oven-h">
         <div className="tile-label">
           <h2 id="oven-h">In the oven</h2>
-          <span className="meta">4 coming · two formats</span>
+          <span className="meta">3 coming</span>
         </div>
 
-        <div className="oven-sub">
-          <span className="oven-sub-title">More daily puzzles</span>
-          <span className="oven-sub-line"></span>
-          <span className="oven-sub-hand">same format, new bite</span>
-        </div>
-
-        <div className="factslap-row" style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'12px'}}>
+        <div className="factslap-row">
 
           <article className="mini-wide">
             <div className="mini-emoji" aria-hidden="true">💵</div>
@@ -285,81 +296,16 @@ export default function Home() {
             <span className="mini-tag">coming &apos;26</span>
           </article>
 
-        </div>
-
-        <div className="oven-sub" style={{marginTop:'28px'}}>
-          <span className="oven-sub-title">New: play-forever games</span>
-          <span className="oven-sub-line"></span>
-          <span className="oven-sub-hand">no daily reset, just play</span>
-        </div>
-
-        <div className="arcade-row">
-
-          {/* Bloom */}
-          <article className="arcade-card">
-            <div className="arcade-preview" aria-hidden="true">
-              <div style={{display:'flex',flexDirection:'column',alignItems:'center',gap:'8px'}}>
-                <div className="bloom-grid">
-                  {bloomColors.map((color, i) => (
-                    <div key={i} className="bloom-cell" style={{background:color}}></div>
-                  ))}
-                </div>
-                <span style={{fontFamily:'var(--mono)',fontSize:'9px',textTransform:'uppercase',letterSpacing:'0.12em',color:'var(--ink-faded)'}}>23 moves · par 21</span>
-              </div>
+          <article className="mini-wide">
+            <div className="mini-emoji" aria-hidden="true">🧪</div>
+            <div className="mini-body">
+              <h3 className="mini-name">Sortl</h3>
+              <p className="mini-desc">Sort coloured liquids into pure test tubes. One layer at a time, no mixing at the end.</p>
             </div>
-            <div className="arcade-body">
-              <div className="arcade-top">
-                <h3 className="arcade-name">Bloom</h3>
-                <span className="arcade-type">Daily + Infinite</span>
-              </div>
-              <p className="arcade-desc">Flood-fill the 14×14 grid in as few moves as possible. Pick a colour, watch your territory spread.</p>
-              <div className="arcade-footer">
-                <span className="arcade-mechanic">BFS flood-fill</span>
-                <span className="arcade-tag">coming &apos;26</span>
-              </div>
+            <div className="mini-verdicts" aria-hidden="true">
+              <span className="verdict-chip v-true">Infinite levels</span>
             </div>
-          </article>
-
-          {/* Sortl */}
-          <article className="arcade-card">
-            <div className="arcade-preview" aria-hidden="true">
-              <div className="sortl-tubes">
-                <div className="sortl-tube">
-                  <div className="sortl-layer" style={{height:'18px',background:'rgba(196,90,58,0.7)'}}></div>
-                  <div className="sortl-layer" style={{height:'18px',background:'rgba(196,90,58,0.8)'}}></div>
-                  <div className="sortl-layer" style={{height:'18px',background:'rgba(196,90,58,0.9)'}}></div>
-                  <div className="sortl-layer" style={{height:'18px',background:'#c45a3a'}}></div>
-                </div>
-                <div className="sortl-tube">
-                  <div className="sortl-layer" style={{height:'18px',background:'#6b4858'}}></div>
-                  <div className="sortl-layer" style={{height:'18px',background:'#d49a3a'}}></div>
-                  <div className="sortl-layer" style={{height:'18px',background:'#7a8a5e'}}></div>
-                  <div className="sortl-layer" style={{height:'18px',background:'#6b4858'}}></div>
-                </div>
-                <div className="sortl-tube">
-                  <div className="sortl-layer" style={{height:'18px',background:'#7a8a5e'}}></div>
-                  <div className="sortl-layer" style={{height:'18px',background:'#d49a3a'}}></div>
-                  <div className="sortl-layer" style={{height:'18px',background:'#d49a3a'}}></div>
-                  <div className="sortl-layer" style={{height:'18px',background:'#7a8a5e'}}></div>
-                </div>
-                <div className="sortl-tube">
-                  <div className="sortl-layer" style={{height:'18px',background:'rgba(212,154,58,0.5)'}}></div>
-                  <div className="sortl-layer" style={{height:'18px',background:'rgba(212,154,58,0.65)'}}></div>
-                </div>
-                <div className="sortl-tube"></div>
-              </div>
-            </div>
-            <div className="arcade-body">
-              <div className="arcade-top">
-                <h3 className="arcade-name">Sortl</h3>
-                <span className="arcade-type">Infinite levels</span>
-              </div>
-              <p className="arcade-desc">Sort coloured liquids into pure test tubes. One layer at a time, no mixing at the end.</p>
-              <div className="arcade-footer">
-                <span className="arcade-mechanic">Procedural levels</span>
-                <span className="arcade-tag">coming &apos;26</span>
-              </div>
-            </div>
+            <span className="mini-tag">coming &apos;26</span>
           </article>
 
         </div>
@@ -408,6 +354,7 @@ export default function Home() {
             <div className="dash" aria-hidden="true"></div>
             <div className="stats">
               <span><b>3</b> daily games</span>
+              <span><b>2</b> arcade games</span>
               <span><b>5</b> in the oven</span>
               <span><b>free</b> · forever</span>
             </div>
@@ -436,7 +383,7 @@ export default function Home() {
         <aside className="ledger" aria-label="Platform stats">
           <h4>The numbers</h4>
           <ul>
-            <li><b>Games live</b> <span>03</span></li>
+            <li><b>Games live</b> <span>05</span></li>
             <li><b>In the oven</b> <span>05</span></li>
             <li><b>Account required</b> <span>NEVER</span></li>
             <li><b>Trackers installed</b> <span>00</span></li>
