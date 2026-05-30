@@ -920,6 +920,15 @@ body::after {
   color: var(--terracotta-2);
   transform: rotate(-1deg);
 }
+.howto-extra {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  text-align: center;
+  margin-top: 16px;
+}
 
 /* Receipt strip */
 .receipt {

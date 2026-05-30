@@ -195,7 +195,7 @@ export default function Home() {
       <section id="arcade" aria-labelledby="arcade-h">
         <div className="tile-label">
           <h2 id="arcade-h">Play forever</h2>
-          <span className="meta">no daily reset · just play</span>
+          <span className="meta">play at your own pace · 300 levels each</span>
         </div>
 
         <div className="daily">
@@ -344,6 +344,12 @@ export default function Home() {
           </ol>
 
           <p className="howto-foot">that&apos;s the whole game, honestly</p>
+
+          <p className="howto-extra">
+            Prefer to play at your own pace? <strong>Palette</strong> and <strong>Bloom</strong>{' '}
+            also have 300 levels each — no waiting, no daily reset.{' '}
+            Just pick up where you left off.
+          </p>
 
           <div className="receipt" aria-label="Schedule and platform stats">
             <div className="midnight">
