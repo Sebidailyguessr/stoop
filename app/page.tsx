@@ -195,7 +195,7 @@ export default function Home() {
       <section id="arcade" aria-labelledby="arcade-h">
         <div className="tile-label">
           <h2 id="arcade-h">Play forever</h2>
-          <span className="meta">play at your own pace · 300 levels each</span>
+          <span className="meta">3 games · 300 levels each</span>
         </div>
 
         <div className="daily">
@@ -256,6 +256,32 @@ export default function Home() {
             </div>
           </a>
 
+          {/* Sortl */}
+          <a className="card c6 card--arcade" href="https://sortl.stoop.games" target="_blank" rel="noopener noreferrer">
+            <div className="card-left">
+              <div className="live-row">
+                <span className="live-dot" aria-hidden="true"></span>
+                Live now
+              </div>
+              <div className="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3"  y="2" width="5" height="14" rx="2.5" fill="#c45a3a" stroke="none"/>
+                  <rect x="10" y="2" width="5" height="14" rx="2.5" fill="#d49a3a" stroke="none"/>
+                  <rect x="17" y="2" width="5" height="14" rx="2.5" fill="#7a8a5e" stroke="none"/>
+                  <rect x="3"  y="8" width="5" height="8"  rx="0"   fill="#6b4858" stroke="none"/>
+                  <rect x="10" y="10" width="5" height="6" rx="0"   fill="#4a7a8a" stroke="none"/>
+                  <path d="M3 16 Q5.5 20 8 16" fill="#c45a3a" stroke="none"/>
+                  <path d="M10 16 Q12.5 20 15 16" fill="#d49a3a" stroke="none"/>
+                  <path d="M17 16 Q19.5 20 22 16" fill="#7a8a5e" stroke="none"/>
+                </svg>
+              </div>
+              <h3 className="game-name">Sortl</h3>
+              <p className="game-desc">Sort coloured liquids into pure test tubes. 300 levels.</p>
+              <span className="game-url">sortl.stoop.games</span>
+              <span className="play-btn">Play now <span className="arrow">→</span></span>
+            </div>
+          </a>
+
         </div>
       </section>
 
@@ -263,7 +289,7 @@ export default function Home() {
       <section id="oven" aria-labelledby="oven-h">
         <div className="tile-label">
           <h2 id="oven-h">In the oven</h2>
-          <span className="meta">3 coming</span>
+          <span className="meta">2 coming</span>
         </div>
 
         <div className="factslap-row">
@@ -292,18 +318,6 @@ export default function Home() {
               <span className="verdict-chip v-true">✓ True</span>
               <span className="verdict-chip v-false">✗ False</span>
               <span className="verdict-chip v-ctx">⚠ Context</span>
-            </div>
-            <span className="mini-tag">coming &apos;26</span>
-          </article>
-
-          <article className="mini-wide">
-            <div className="mini-emoji" aria-hidden="true">🧪</div>
-            <div className="mini-body">
-              <h3 className="mini-name">Sortl</h3>
-              <p className="mini-desc">Sort coloured liquids into pure test tubes. One layer at a time, no mixing at the end.</p>
-            </div>
-            <div className="mini-verdicts" aria-hidden="true">
-              <span className="verdict-chip v-true">Infinite levels</span>
             </div>
             <span className="mini-tag">coming &apos;26</span>
           </article>
@@ -346,8 +360,8 @@ export default function Home() {
           <p className="howto-foot">that&apos;s the whole game, honestly</p>
 
           <p className="howto-extra">
-            Prefer to play at your own pace? <strong>Palette</strong> and <strong>Bloom</strong>{' '}
-            also have 300 levels each — no waiting, no daily reset.{' '}
+            Prefer to play at your own pace? <strong>Palette</strong>, <strong>Bloom</strong>{' '}
+            and <strong>Sortl</strong> all have 300 levels — no waiting, no daily reset.{' '}
             Just pick up where you left off.
           </p>
 
@@ -360,8 +374,8 @@ export default function Home() {
             <div className="dash" aria-hidden="true"></div>
             <div className="stats">
               <span><b>3</b> daily games</span>
-              <span><b>2</b> arcade games</span>
-              <span><b>5</b> in the oven</span>
+              <span><b>3</b> arcade games</span>
+              <span><b>2</b> in the oven</span>
               <span><b>free</b> · forever</span>
             </div>
           </div>
@@ -389,8 +403,8 @@ export default function Home() {
         <aside className="ledger" aria-label="Platform stats">
           <h4>The numbers</h4>
           <ul>
-            <li><b>Games live</b> <span>05</span></li>
-            <li><b>In the oven</b> <span>05</span></li>
+            <li><b>Games live</b> <span>06</span></li>
+            <li><b>In the oven</b> <span>02</span></li>
             <li><b>Account required</b> <span>NEVER</span></li>
             <li><b>Trackers installed</b> <span>00</span></li>
             <li><b>Built by</b> <span>ONE PERSON</span></li>

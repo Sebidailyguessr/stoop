@@ -288,6 +288,7 @@ body::after {
 .card.c3 { background: #EF9F27; --card-ink: #412402; --icon-bg: #854F0B; }
 .card.c4 { background: #C0DD97; --card-ink: #173404; --icon-bg: #3B6D11; }
 .card.c5 { background: #D4C0E8; --card-ink: #1E0A30; --icon-bg: #6A3090; }
+.card.c6 { background: #EDD5B0; --card-ink: #2A1F15; --icon-bg: #C45A3A; }
 
 .card--arcade {
   grid-template-columns: 1fr;
